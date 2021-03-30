@@ -61,8 +61,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--slate);
+    background-color: var(--lightest-navy);
     color: var(--lightest-slate);
+  }
+
+  :focus {
+    outline: 2px dashed var(--green);
+    outline-offset: 3px;
   }
 
   body {

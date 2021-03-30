@@ -9,6 +9,11 @@ const StyledHeroSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
+  padding: 0;
+
+  @media (max-width: 480px) and (min-height: 700px) {
+    padding-bottom: 10vh;
+  }
 
   h1 {
     margin: 0 0 30px 4px;
@@ -47,13 +52,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const zeroo = <p></p>
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = <h2 className="big-heading">Donald Chinhuru.</h2>;
+  const three = <h3 className="big-heading">I build things for the love of it.</h3>;
   const four = (
     <p>
-      I'm a software engineer based in Boston, MA specializing in building (and occasionally
-      designing) exceptional websites, applications, and everything in between.
+      I'm an engineer | developer based from Triangle, ZW with interest in IoT, chatbots, mobile applications, and everything tech-cool in between.
     </p>
   );
   const five = (
@@ -62,7 +67,7 @@ const Hero = () => {
     </a>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [zeroo, one, two, three, four, five];
 
   return (
     <StyledHeroSection>
