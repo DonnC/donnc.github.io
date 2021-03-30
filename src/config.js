@@ -20,10 +20,13 @@ module.exports = {
     },
     {
       name: 'External',
+      url: 'https://pypi.org/user/DonaldC/',
+    },
+    {
+      name: 'External',
       url: 'https://octoprofile.now.sh/user?id=DonnC',
     },
   ],
-
 
   navLinks: [
     {

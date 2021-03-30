@@ -7,7 +7,7 @@ tech:
   - Flutter
   - Android
   - Mobile
-company: ''
+company: 'DonnC Lab'
 showInProjects: true
 ---
 

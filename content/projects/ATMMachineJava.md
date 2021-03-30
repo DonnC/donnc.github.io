@@ -4,8 +4,8 @@ title: 'School Project: JAVA ATM Machine'
 github: 'https://github.com/DonnC/ATM-Machine'
 tech:
   - Java
-company: ''
-showInProjects: true
+company: 'DonnC Lab'
+showInProjects: false
 ---
 
 Once a school assignment project to develop an ATM Machine System in JAVA using custom exceptions.

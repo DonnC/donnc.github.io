@@ -5,8 +5,8 @@ github: 'https://github.com/DonnC/RabbitGUI'
 tech:
   - Python
   - PySimpleGUI
-company: ''
-showInProjects: true
+company: 'DonnC Lab'
+showInProjects: false
 ---
 
 An attempt to simplify rabbit rearing project at home to provide an easy to use system to log rabbit information during mating season

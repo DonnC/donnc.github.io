@@ -58,7 +58,7 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build things for the love of it.</h3>;
   const four = (
     <p>
-      I'm an electronic engineering student based in Triangle, ZW with interest in IoT and building chatbots, mobile applications, and everything in between.
+      I'm an engineer | developer based from Triangle, ZW with interest in IoT, chatbots, mobile applications, and everything tech-cool in between.
     </p>
   );
   const five = (

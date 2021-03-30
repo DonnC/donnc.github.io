@@ -8,6 +8,7 @@ tech:
   - Arduino
   - C++
 showInProjects: false
+company: 'DonnC Lab'
 ---
 
 Bulk sms zw api for embedded device ESP8266 for IoT devices. Port for BulkSMSZW-Api Python 3.

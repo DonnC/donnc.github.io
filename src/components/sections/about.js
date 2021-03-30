@@ -143,17 +143,19 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Donald and I enjoy creating real solutions for real problems. My
-              goal is to always build products that provides performant experiences from electronic products,
-              chatbots and mobile applications. 
+              goal is to always build products that provides performant experiences for clients and the community. 
             </p>
 
             <p>
-              I'm currently enrolled at{' '} <a href="https://www.nust.ac.zw/">National University of Science and Technology</a> doing my <code>BEng in Electronic Engineering</code>, 
+              I'm currently enrolled at{' '} <a href="https://www.nust.ac.zw/">NUST</a>, doing my <code>BEng in Electronic Engineering</code>, 
               I've had priviledge to work with a fast-growing startup at {' '}
               <a href="https://www.netro.co.zw/">Netro Inc Zimbabwe</a> where i contributed on assisting the community on projects, customer relations and learnt business skills. 
               I have co-founded an awesome community {' '}
-              <a href="https://www.twitter.com/FlutterZimbabwe">FlutterZw</a>, where i also contribute on open source projects. My
-              main focus these days is, learning to build cross-platform applications with <code>Flutter</code>
+              <a href="https://www.twitter.com/FlutterZimbabwe">FlutterZw</a>, where i also contribute on open source projects. 
+            </p> 
+              
+            <p>
+              My main focus these days is, learning to build cross-platform applications with <code>Flutter</code> among a plenthora of other things 😎
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

@@ -2,10 +2,11 @@
 date: '2019-11-22'
 title: 'Zimbabwe Newspaper Python Module'
 github: 'https://github.com/DonnC/zim-newspaper'
-ios: ''
-android: ''
+external: 'https://pypi.org/project/newspaper-zw/'
+company: 'DonnC Lab'
 tech:
   - Python
+  - Library
   - Web Scrapper
 showInProjects: false
 ---

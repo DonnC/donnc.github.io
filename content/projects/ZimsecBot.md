@@ -6,7 +6,7 @@ tech:
   - Python
   - RASA
   - Ngrok
-company: ''
+company: 'DonnC Lab'
 showInProjects: true
 ---
 

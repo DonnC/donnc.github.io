@@ -5,7 +5,7 @@ github: 'https://github.com/DonnC/Rate-CMD'
 external: 'https://www.marketwatch.co.zw/'
 tech:
   - Python
-company: ''
+company: 'DonnC Lab'
 showInProjects: true
 ---
 
