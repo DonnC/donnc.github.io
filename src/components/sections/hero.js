@@ -52,15 +52,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const zeroo = <p></p>
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = <h2 className="big-heading">Donald Chinhuru.</h2>;
+  const three = <h3 className="big-heading">I build things for the love of it.</h3>;
   const four = (
     <p>
-      I'm a Boston-based software engineer who specializes in building (and occasionally designing)
-      exceptional digital experiences. Currently, I'm an engineer at{' '}
-      <a href="https://upstatement.com/">Upstatement</a> focused on building accessible,
-      human-centered products.
+      I'm an electronic engineering student based in Triangle, ZW with interest in IoT and building chatbots, mobile applications, and everything in between.
     </p>
   );
   const five = (
@@ -69,7 +67,7 @@ const Hero = () => {
     </a>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [zeroo, one, two, three, four, five];
 
   return (
     <StyledHeroSection>

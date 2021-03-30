@@ -2,12 +2,11 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Brittany Chiang',
-    description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+    title: 'Donald Chinhuru',
+    description: 'Donald is an electronic engineer with interest in IoT and passion for software development. I found myself building mobile applications, virtual assistants (and occasionally designing) electronic circuits, applications, and everything in between.',
+    siteUrl: 'https://donnc.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+    twitterUsername: '@donix_22',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'BrittanyChiang',
-        short_name: 'BrittanyChiang',
+        name: 'Donald Chinhuru',
+        short_name: 'DonnCLab',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
@@ -151,7 +150,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-45666519-2',
+        trackingId: 'UA-158650408-1',
       },
     },
   ],
