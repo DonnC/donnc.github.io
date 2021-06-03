@@ -2,7 +2,7 @@
 date: '2020-03-09'
 title: 'Hot Recharge API'
 github: 'https://github.com/DonnC/Hot-Recharge-ZW'
-external: 'https://pypi.org/project/hot-recharge/'
+python: 'https://pypi.org/project/hot-recharge/'
 tech:
   - Python
   - Mobile

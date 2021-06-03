@@ -15,6 +15,12 @@ import {
   IconStar,
   IconTwitter,
   IconZap,
+  IconYoutube,
+  IconMedium,
+  IconStackOverflow,
+  IconFlutter,
+  IconDart,
+  IconPython,
 } from '@components/icons';
 
 const Icon = ({ name }) => {
@@ -43,8 +49,20 @@ const Icon = ({ name }) => {
       return <IconPlayStore />;
     case 'Star':
       return <IconStar />;
+    case 'Youtube':
+      return <IconYoutube />;
+    case 'Medium':
+      return <IconMedium />;
+    case 'StackOverflow':
+      return <IconStackOverflow />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Python':
+      return <IconPython />;
+    case 'Flutter':
+      return <IconFlutter />;
+    case 'Dart':
+      return <IconDart />;
     case 'Zap':
       return <IconZap />;
     default:

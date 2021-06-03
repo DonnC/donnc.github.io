@@ -2,7 +2,7 @@
 date: '2021-03-14'
 title: 'DocxTpl Flutter Plugin'
 github: 'https://github.com/DonnC/docxtpl'
-external: 'https://pub.dev/packages/docxtpl'
+flutter: 'https://pub.dev/packages/docxtpl'
 tech:
   - Flutter
   - Dart

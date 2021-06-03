@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Flutter', 'C-C++', 'Dart', 'Arduino', 'Vue', 'Mobile App Development'];
+  const skills = ['Python', 'Flutter', 'C-C++', 'Java Spring', 'Qt-PyQt', 'Dart', 'Arduino', 'Vue', 'Cross Platform Development',];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,7 +142,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Donald and I enjoy creating real solutions for real problems. My
+              Hi 👋🏼 I'm Donald and I enjoy creating real solutions for real problems. My
               goal is to always build products that provides performant experiences for clients and the community. 
             </p>
 
@@ -150,12 +150,13 @@ const About = () => {
               I'm currently enrolled at{' '} <a href="https://www.nust.ac.zw/">NUST</a>, doing my <code>BEng in Electronic Engineering</code>, 
               I've had priviledge to work with a fast-growing startup at {' '}
               <a href="https://www.netro.co.zw/">Netro Inc Zimbabwe</a> where i contributed on assisting the community on projects, customer relations and learnt business skills. 
-              I have co-founded an awesome community {' '}
-              <a href="https://www.twitter.com/FlutterZimbabwe">FlutterZw</a>, where i also contribute on open source projects. 
+              I have co-founded an awesome community, {' '}
+              <a href="https://www.twitter.com/FlutterZimbabwe">FlutterZw</a>, where i am active. 
             </p> 
               
             <p>
-              My main focus these days is, learning to build cross-platform applications with <code>Flutter</code> among a plenthora of other things 😎
+              My main focus these days is: cross-platform dev with <code>Flutter</code> and backend development in <code>Java Spring Boot</code>. I also find time to write technical blogs, on {' '}
+              <a href="https://donnclab.medium.com/">Medium</a> 😎
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

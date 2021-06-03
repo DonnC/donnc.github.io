@@ -3,7 +3,6 @@ date: '2'
 title: 'ZASH App'
 cover: './zash.png'
 playstore: 'https://play.google.com/store/apps/details?id=com.donnclab.zash_app'
-external: 'https://play.google.com/store/apps/details?id=com.donnclab.zash_app'
 tech:
   - Flutter
   - Mobile App
@@ -11,7 +10,7 @@ tech:
 showInProjects: true
 ---
 
-A [Zash](https://www.zimbo.cash/) app that enables you to view and manage your zash transactions
+A [Zash](https://www.zimbo.cash/) app with more than [5K+]() downloads for [ZIMBOCASH]() that enables you to view and manage your zash transactions
 
 Features:
 * Easily manage all your zash transactions

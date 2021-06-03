@@ -18,9 +18,25 @@ module.exports = {
       name: 'Twitter',
       url: 'https://twitter.com/donix_22',
     },
-    {
-      name: 'External',
+     {
+      name: 'Medium',
+      url: 'https://donnclab.medium.com/',
+    },
+     {
+      name: 'Python',
       url: 'https://pypi.org/user/DonaldC/',
+    },
+     {
+      name: 'Flutter',
+      url: 'https://pub.dev/packages?q=email%3Adonychinhuru%40gmail.com',
+    },
+    {
+      name: 'StackOverflow',
+      url: 'https://stackoverflow.com/users/15746605/donnc',
+    },
+     {
+      name: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCdbjCQra85wNB4xlcA6rXUQ',
     },
     {
       name: 'External',

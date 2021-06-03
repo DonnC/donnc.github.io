@@ -2,7 +2,7 @@
 date: '2020-12-12'
 title: 'Bulksms Flutter Plugin'
 github: 'https://github.com/DonnC/bulksmszw'
-external: 'https://pub.dev/packages/bulksmszw'
+flutter: 'https://pub.dev/packages/bulksmszw'
 tech:
   - Flutter
   - Dart

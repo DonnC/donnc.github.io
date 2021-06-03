@@ -3,7 +3,6 @@ date: '2'
 title: 'Flupad'
 cover: './flupad.png'
 playstore: 'https://play.google.com/store/apps/details?id=com.donnclab.flupad'
-external: 'https://play.google.com/store/apps/details?id=com.donnclab.flupad'
 tech:
   - Flutter
   - GooglePlay Store

@@ -55,10 +55,10 @@ const Hero = () => {
   const zeroo = <p></p>
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Donald Chinhuru.</h2>;
-  const three = <h3 className="big-heading">I build things for the love of it.</h3>;
+  const three = <h3 className="big-heading">Building real solutions, for real problems.</h3>;
   const four = (
     <p>
-      I'm an engineer | developer based from Triangle, ZW with interest in IoT, chatbots, mobile applications, and everything tech-cool in between.
+      I'm an Electronics Engineer and a Software Developer based in Harare, ZW with interest in embedded electronics, IoT, chatbots, cross platform development and everything that interests me.
     </p>
   );
   const five = (

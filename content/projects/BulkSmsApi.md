@@ -2,7 +2,7 @@
 date: '2019-11-22'
 title: 'BulkSms API'
 github: 'https://github.com/DonnC/BulkSmsZW-Api'
-external: 'https://pypi.org/project/Bulksmsapi-zw/'
+python: 'https://pypi.org/project/Bulksmsapi-zw/'
 tech:
   - Python
   - BulkSms

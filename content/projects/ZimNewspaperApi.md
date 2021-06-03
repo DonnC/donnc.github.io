@@ -2,7 +2,7 @@
 date: '2019-11-22'
 title: 'Zimbabwe Newspaper Python Module'
 github: 'https://github.com/DonnC/zim-newspaper'
-external: 'https://pypi.org/project/newspaper-zw/'
+python: 'https://pypi.org/project/newspaper-zw/'
 company: 'DonnC Lab'
 tech:
   - Python

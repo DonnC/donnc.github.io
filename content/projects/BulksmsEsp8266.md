@@ -2,7 +2,7 @@
 date: '2019-11-04'
 title: 'BulkSMSZW-ESP8266'
 github: 'https://github.com/DonnC/BulkSMSZW-ESP8266'
-external: 'https://github.com/DonnC/BulkSmsZW-Api'
+python: 'https://github.com/DonnC/BulkSmsZW-Api'
 tech:
   - C
   - Arduino

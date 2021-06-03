@@ -3,7 +3,6 @@ date: '3'
 title: 'MMR Mobile App'
 cover: './mmr.png'
 playstore: 'https://play.google.com/store/apps/details?id=com.donnclab.mobile_money_records'
-external: 'https://play.google.com/store/apps/details?id=com.donnclab.mobile_money_records'
 tech:
   - Flutter
   - GooglePlay Store

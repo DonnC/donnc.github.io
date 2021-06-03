@@ -178,6 +178,8 @@ const Projects = () => {
               tech
               github
               external
+              flutter
+              python
             }
             html
           }
@@ -215,7 +217,7 @@ const Projects = () => {
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { github, external, title, tech } = frontmatter;
+              const { github, external, flutter, python, title, tech } = frontmatter;
 
               return (
                 <CSSTransition
@@ -244,6 +246,16 @@ const Projects = () => {
                             {external && (
                               <a href={external} aria-label="External Link" className="external">
                                 <Icon name="External" />
+                              </a>
+                            )}
+                             {flutter && (
+                              <a href={flutter} aria-label="PubDev Link" className="external">
+                                <Icon name="Flutter" />
+                              </a>
+                            )}
+                            {python && (
+                              <a href={python} aria-label="PyPi Link" className="external">
+                                <Icon name="Python" />
                               </a>
                             )}
                           </div>

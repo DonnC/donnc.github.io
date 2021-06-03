@@ -2,7 +2,7 @@
 date: '2021-02-17'
 title: 'HotRecharge Flutter Plugin'
 github: 'https://github.com/DonnC/hot-recharge-flutter'
-external: 'https://pub.dev/packages/hot_recharge'
+flutter: 'https://pub.dev/packages/hot_recharge'
 tech:
   - Flutter
   - Dart

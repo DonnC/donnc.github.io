@@ -313,6 +313,7 @@ const Featured = () => {
               tech
               github
               external
+              playstore
             }
             html
           }
@@ -340,7 +341,7 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, playstore, cover } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -376,12 +377,20 @@ const Featured = () => {
                           <Icon name="External" />
                         </a>
                       )}
+                      {playstore && (
+                        <a href={playstore} aria-label="PlayStore Link">
+                          <Icon name="PlayStore" />
+                        </a>
+                      )}
+                      
+                      
                     </div>
+                    
                   </div>
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a href={external ? external : github ? github : playstore ? playstore : '#'}>
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
                 </div>
