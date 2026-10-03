@@ -1,0 +1,14 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectVisual from '../../components/ProjectVisual.astro';
+import Arrow from '../../components/Arrow.astro';
+import { recentProjects, optionalUrl } from '../../lib/content';
+export async function getStaticPaths() { return (await recentProjects()).map(project => ({ params: { slug: project.id }, props: { project } })); }
+const { project } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+const projects = await recentProjects();
+const next = projects[(projects.findIndex(p => p.id === project.id) + 1) % projects.length];
+---
+<BaseLayout title={data.title} description={data.description}><div class="wrap"><section class="case-intro"><a class="back-link" href="/work/">← Selected work</a><div class="eyebrow">{data.category} / {data.status}</div><h1>{data.title}</h1><p>{data.description}</p><div class="case-facts"><div><span>MY ROLE</span><strong>{data.role}</strong></div><div><span>TECHNOLOGIES</span><strong>{data.stack.join(' · ')}</strong></div></div></section><ProjectVisual kind={data.diagram} /><div class="case-body"><aside><span class="eyebrow">WHAT I BROUGHT</span><ul>{data.proof.map(item => <li>{item}</li>)}</ul><div class="case-links">{data.repository && <a href={optionalUrl(data.repository)}>Public repository <Arrow diagonal /></a>}{data.liveUrl && <a href={optionalUrl(data.liveUrl)}>Visit project <Arrow diagonal /></a>}{data.storeUrl && <a href={optionalUrl(data.storeUrl)}>View app <Arrow diagonal /></a>}<a href={optionalUrl()}>Portfolio overview <Arrow /></a><a href="/contact/">Discuss similar work <Arrow /></a></div></aside><article class="prose"><Content /></article></div><a class="next-project" href={`/work/${next.id}/`}><div><span class="eyebrow">NEXT STORY</span><h2>{next.data.title}</h2></div><Arrow /></a></div></BaseLayout>

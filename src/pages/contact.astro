@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Arrow from '../components/Arrow.astro';
+---
+<BaseLayout title="Let’s talk" description="Contact Donald Chinhuru about payment engineering, mobile and fullstack development, ERP integration or technical leadership."><div class="wrap"><section class="page-intro"><span class="eyebrow">LET’S TALK</span><h1>A role. A product.<br /><span class="muted">A difficult integration.</span></h1><p>If you’re hiring an engineer or building something that needs payments, mobile, business platforms or technical leadership, I’d like to hear about it.</p></section><section class="contact-grid"><div class="contact-primary"><span class="eyebrow">THE BEST WAY TO REACH ME</span><h2>Start with an email.</h2><a class="email-link" href="mailto:donychinhuru@gmail.com">donychinhuru@gmail.com <Arrow diagonal /></a><p>Tell me what you’re building, where you need help, and your timeline. For a role, include the team, responsibilities and working arrangement.</p><button class="copy-email" hidden>Copy email address</button><span class="copy-status" role="status"></span><div class="contact-secondary">Also me: <a href="mailto:donnclab@gmail.com">donnclab@gmail.com</a></div></div><div class="contact-options"><div><h3>For teams hiring</h3><p>Senior engineering and technical lead roles across payments, mobile, fullstack and backend systems.</p></div><div><h3>For clients</h3><p>Payment integrations, mobile products, business workflows and custom Frappe/ERPNext applications.</p></div><a class="text-link" href="https://github.com/DonnC">Explore my GitHub <Arrow diagonal /></a></div></section></div>
+<script>
+  const copyButton = document.querySelector<HTMLButtonElement>('.copy-email');
+  if (copyButton && navigator.clipboard) { copyButton.hidden = false; copyButton.addEventListener('click', async () => {
+    const status = document.querySelector('.copy-status');
+    try { await navigator.clipboard.writeText('donychinhuru@gmail.com'); if (status) status.textContent = 'Email address copied.'; }
+    catch { if (status) status.textContent = 'Select the email address above to copy it.'; }
+  }); }
+</script></BaseLayout>

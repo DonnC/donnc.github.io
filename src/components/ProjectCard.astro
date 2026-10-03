@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectVisual from './ProjectVisual.astro';
+import Arrow from './Arrow.astro';
+interface Props { project: CollectionEntry<'projects'>; }
+const { project } = Astro.props;
+const { data, id } = project;
+---
+<article class="project-card" data-category={data.category}>
+  <a class="visual-link" href={`/work/${id}/`} aria-label={`Explore ${data.title}`}><ProjectVisual kind={data.diagram} compact /></a>
+  <div class="card-meta"><span>{data.category}</span><span>{data.status}</span></div>
+  <h3><a href={`/work/${id}/`}>{data.title} <Arrow diagonal /></a></h3>
+  <p>{data.description}</p><div class="card-role">{data.role}</div>
+</article>

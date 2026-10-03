@@ -1,0 +1,28 @@
+---
+import Arrow from './Arrow.astro';
+const links = [['/work/', 'Work'], ['/about/', 'About'], ['/writing/', 'Writing']];
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Donald Chinhuru home"><span class="monogram">dc<span>.</span></span><span class="brand-name">Donald Chinhuru</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">+</span></button>
+  <nav id="main-nav" aria-label="Main navigation">
+    {links.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+    <a class="nav-contact" href="/contact/" aria-current={path === '/contact/' ? 'page' : undefined}>Let’s talk <Arrow diagonal /></a>
+  </nav>
+</header>
+<noscript><style>@media(max-width:580px){.site-header{height:auto;flex-wrap:wrap;padding:20px 0}.site-header nav{display:flex;position:static;flex-direction:row;flex-wrap:wrap;box-shadow:none;border:0;padding:15px 0 0;gap:20px;width:100%}.site-header .nav-contact{margin:0;padding:8px 0;border:0}.menu-toggle{display:none}}</style></noscript>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('#main-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open', !open);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+      toggle.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); toggle.focus();
+    }
+  });
+</script>

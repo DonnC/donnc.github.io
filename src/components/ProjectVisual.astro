@@ -1,0 +1,23 @@
+---
+interface Props { kind: string; compact?: boolean; }
+const { kind, compact = false } = Astro.props;
+const diagrams: Record<string, { label: string; title: string; nodes: string[]; bottom: string; number: string }> = {
+  payments: { label: 'MPOS + MTMS', title: 'One payment. A connected system.', nodes: ['TERMINAL', 'PAYMENT SWITCH', 'TERMINAL MANAGEMENT'], bottom: 'Android / ISO 8583 / Frappe', number: '01' },
+  workflows: { label: 'BANKING WORKFLOWS', title: 'From a document to a decision.', nodes: ['CAPTURE', 'REVIEW', 'APPROVE'], bottom: 'Dynamic forms / Process engine / Audit trail', number: '02' },
+  banking: { label: 'AFC DIGITAL BANKING', title: 'The bank, in your hand.', nodes: ['MOBILE', 'BANKING SERVICES', 'WHATSAPP'], bottom: 'Flutter / APIs / Conversational journeys', number: '03' },
+  erp: { label: 'FRAPPE / ERPNEXT', title: 'Business logic. Connected.', nodes: ['CUSTOM APPS', 'ERP RECORDS', 'PAYMENT INTEGRATIONS'], bottom: 'Python / Frappe / ERPNext', number: '04' },
+  forms: { label: 'VANT FLOW + BAOBAB', title: 'Define once. Build on it.', nodes: ['METADATA', 'FORM RUNTIME', 'APPLICATION SERVICES'], bottom: 'Angular / Java / Developer tooling', number: '05' },
+  chat: { label: 'WCE ECOSYSTEM', title: 'A better conversation starts here.', nodes: ['FLOW TEMPLATES', 'BOT ENGINE', 'LOCAL EMULATOR'], bottom: 'Python / Java / WhatsApp / USSD', number: '06' },
+  messaging: { label: 'BULK MESSAGING', title: 'A campaign is a system.', nodes: ['RECIPIENT DATA', 'BATCH / EVENTS', 'DELIVERY ATTEMPTS'], bottom: 'Spring Batch / Kafka integration / PostgreSQL', number: '07' },
+  animation: { label: 'KINETIFRAME · IN DEVELOPMENT', title: 'Two ways to bring a story to life.', nodes: ['DRAW FRAMES', 'BUILD A RIG', 'ANIMATE'], bottom: 'Kotlin / Compose / Canvas', number: '08' },
+};
+const d = diagrams[kind] || diagrams.payments;
+---
+<div class:list={['project-visual', `visual-${kind}`, { compact }]} aria-label={`${d.label}: conceptual architecture illustration`} role="img">
+  <div class="visual-top"><span>{d.label}</span><span class="visual-number">/{d.number}</span></div>
+  <div class="visual-title">{d.title}</div>
+  <div class="visual-flow">
+    {d.nodes.map((node, i) => <><div class:list={['flow-node', { 'node-accent': i === 1 }]}><svg viewBox="0 0 40 40" width="32" height="32" fill="none" aria-hidden="true"><rect x="8" y="8" width="24" height="24" rx={kind === 'chat' ? 12 : 5} stroke="currentColor" stroke-width="1.5" /><path d={i === 0 ? 'M15 16h10M15 21h10M15 26h6' : i === 1 ? 'm14 20 4 4 8-9' : 'M15 14h10v12H15zM20 10v4M20 26v4'} stroke="currentColor" stroke-width="1.5" /></svg><span>{node}</span></div>{i < 2 && <span class="flow-connector" aria-hidden="true">→</span>}</>)}
+  </div>
+  <div class="visual-bottom"><span>{d.bottom}</span><span class="diagram-label">SYSTEM SKETCH</span></div>
+</div>

@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import Arrow from '../../components/Arrow.astro';
+import { publishedPosts } from '../../lib/content';
+const posts = await publishedPosts();
+---
+<BaseLayout title="Writing" description="Practical engineering articles by Donald Chinhuru on forms, business platforms, payment integrations and chatbot developer tools."><div class="wrap"><section class="page-intro"><span class="eyebrow">WRITING / FROM THE WORKBENCH</span><h1>Build it.<br /><span class="muted">Understand it. Share it.</span></h1><p>Notes on the problems I run into, the tools I build, and the tradeoffs behind them. Written from engineering work, rather than a checklist of trends.</p></section><PostList posts={posts} /><div class="writing-elsewhere"><span>More from my notebook</span><a href="https://donnclab.hashnode.dev">Hashnode <Arrow diagonal /></a><a href="https://donnclab.medium.com">Medium <Arrow diagonal /></a><a href="/writing/rss.xml">Subscribe via RSS <Arrow /></a></div></div></BaseLayout>

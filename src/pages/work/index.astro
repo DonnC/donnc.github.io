@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { recentProjects } from '../../lib/content';
+const projects = await recentProjects();
+const categories = ['All work', 'Payments', 'Platforms', 'Mobile', 'Tools', 'Creative'];
+---
+<BaseLayout title="Selected work" description="Payment systems, banking workflows, mobile experiences, ERP integrations and developer tools built by Donald Chinhuru.">
+<div class="wrap"><section class="page-intro"><span class="eyebrow">SELECTED WORK / RECENT THREE YEARS</span><h1>Different systems.<br /><span class="muted">One connected skill set.</span></h1><p>Work I’ve led, products I’ve built independently, and tools I’ve shared. Each story focuses on my contribution and the problem it addresses.</p></section>
+<section class="work-section" aria-label="Projects"><div class="filter-bar" hidden><div class="filters" role="group" aria-label="Filter projects">{categories.map((c,i) => <button data-filter={c} aria-pressed={i===0 ? 'true':'false'}>{c}</button>)}</div><p id="result-count" aria-live="polite">{projects.length} project stories</p></div><div class="project-grid work-grid">{projects.map(project => <ProjectCard project={project} />)}</div></section>
+</div>
+<script>
+  const bar = document.querySelector<HTMLElement>('.filter-bar');
+  if (bar) bar.hidden = false;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-category]');
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const category = button.dataset.filter;
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    let count = 0;
+    cards.forEach(card => { const visible = category === 'All work' || card.dataset.category === category; card.hidden = !visible; if (visible) count++; });
+    const result = document.querySelector('#result-count');
+    if (result) result.textContent = `${count} project ${count === 1 ? 'story' : 'stories'}`;
+  }));
+</script>
+</BaseLayout>
