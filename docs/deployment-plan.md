@@ -17,8 +17,8 @@ The workflow triggers on `dev`, installs Node 24 dependencies using the committe
 
 ## Publish the reviewed replacement
 
-1. Review the staged changes in the migration clone. Confirm `origin` is the repository above and the source baseline has not changed remotely.
-2. Commit the changes and push `portfolio-refresh`. Open a pull request targeting `dev`.
+1. Review the migration commits against `origin/dev` in the migration clone. Confirm `origin` is the repository above and the source baseline has not changed remotely.
+2. Push the prepared `portfolio-refresh` branch. Open a pull request targeting `dev`.
 3. Merge the reviewed change into `dev`.
 4. In Settings → Pages, set Source to **GitHub Actions**. Keep the domain and HTTPS configuration.
 5. Run the portfolio workflow on `dev` if the push-triggered run occurred before the Pages source change.
