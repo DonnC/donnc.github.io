@@ -17,6 +17,8 @@ npm run preview
 
 ## Update content
 
+See [the editing guide](docs/editing-guide.md) for browser-only edits, new articles, local previews and rollback.
+
 - Projects: `src/content/projects/*.md`. Edit the description and story without touching layout. Copy `docs/project-template.md` for a new case.
 - Articles: `src/content/posts/*.md`. Copy `docs/article-template.md`, write Markdown, set `draft: false` when ready. New articles automatically receive a page, reading time and RSS entry.
 - Home, biography and contact: `src/pages/index.astro`, `about.astro`, `contact.astro`.
@@ -44,7 +46,7 @@ The current live site is built from `master`, which holds the previous Gatsby bu
 
 This implementation is configured for a user Pages site at the domain root. A different repository name needs a `base` setting **and every internal route/asset URL updated**. See [Astro’s GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/).
 
-No remote repository, profile README or live site was changed during local development.
+The prepared migration is on the `portfolio-refresh` branch. Publication uses the repository's `dev` branch and the GitHub Pages workflow.
 
 ## Content judgment
 
