@@ -1,0 +1,10 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { publishedPosts, formatDate } from '../../lib/content';
+export async function getStaticPaths() { return (await publishedPosts()).map(post => ({ params: { slug: post.id }, props: { post } })); }
+const { post } = Astro.props;
+const { Content } = await render(post);
+const minutes = Math.max(1, Math.ceil((post.body || '').split(/\s+/).length / 220));
+---
+<BaseLayout title={post.data.title} description={post.data.description} canonical={post.data.canonical} article><div class="wrap"><section class="article-intro"><a class="back-link" href="/writing/">← All writing</a><div class="eyebrow">{post.data.topic}</div><h1>{post.data.title}</h1><p>{post.data.description}</p><div class="article-meta"><span>Donald Chinhuru</span><time datetime={post.data.published.toISOString()}>{formatDate(post.data.published)}</time><span>{minutes} min read</span></div>{post.data.canonical && <p class="canonical-note">Also published on <a href={post.data.canonical}>Hashnode ↗</a>.</p>}</section><article class="prose article-body"><Content /></article><div class="article-end"><p>Working on something similar?</p><a class="text-link" href="/contact/">Let’s compare notes ↗</a></div></div></BaseLayout>

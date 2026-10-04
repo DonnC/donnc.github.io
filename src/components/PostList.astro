@@ -1,0 +1,8 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Arrow from './Arrow.astro';
+import { formatDate } from '../lib/content';
+interface Props { posts: CollectionEntry<'posts'>[]; }
+const { posts } = Astro.props;
+---
+<div class="post-list">{posts.map(post => <article><div class="post-meta"><span>{post.data.topic}</span><time datetime={post.data.published.toISOString()}>{formatDate(post.data.published)}</time></div><h3><a href={`/writing/${post.id}/`}>{post.data.title} <Arrow diagonal /></a></h3><p>{post.data.description}</p></article>)}</div>

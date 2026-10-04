@@ -1,87 +1,57 @@
-<div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/bchiang7/v4/main/src/images/logo.png" width="100" />
-</div>
-<h1 align="center">
-  brittanychiang.com - v4
-</h1>
-<p align="center">
-  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
-<p align="center">
-  Previous iterations:
-  <a href="https://github.com/bchiang7/v1" target="_blank">v1</a>,
-  <a href="https://github.com/bchiang7/v2" target="_blank">v2</a>,
-  <a href="https://github.com/bchiang7/bchiang7.github.io" target="_blank">v3</a>
-</p>
-<p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
-  </a>
-</p>
+# Donald Chinhuru — Portfolio
 
-![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
+Static Astro website for **https://donnc.github.io**. No database, CMS account or API keys are needed. Project and article content lives in Markdown.
 
-## 🚨 Forking this repo (please read!)
+## Run locally
 
-Many people have contacted me asking me if they can use this code for their own website, and the answer to that question is usually **yes, with attribution**.
+Use Node.js 24 or newer.
 
-I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
+```sh
+npm ci
+npm run dev
+npm run build
+npm run preview
+```
 
-Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Gatsby docs](https://www.gatsbyjs.org/docs/).
+`build` checks Astro/TypeScript, generates the static site and checks internal links. Entries marked `draft: true` stay unpublished. `dist/` is the publishable output. The reviewed earlier scaffold is backed up outside this folder in `../scaffold-backup-2026-10-03/`.
 
-### TL;DR
+## Update content
 
-Yes, you can fork this repo. Please give me proper credit by linking back to [brittanychiang.com](https://brittanychiang.com). Thanks!
+See [the editing guide](docs/editing-guide.md) for browser-only edits, new articles, local previews and rollback.
 
-## 🛠 Installation & Set Up
+- Projects: `src/content/projects/*.md`. Edit the description and story without touching layout. Copy `docs/project-template.md` for a new case.
+- Articles: `src/content/posts/*.md`. Copy `docs/article-template.md`, write Markdown, set `draft: false` when ready. New articles automatically receive a page, reading time and RSS entry.
+- Home, biography and contact: `src/pages/index.astro`, `about.astro`, `contact.astro`.
+- Visual design: `src/styles/global.css`. Architecture illustrations: `src/components/ProjectVisual.astro`.
+- Contact addresses are in the contact page, footer and copy-email handler. Change all references together.
 
-1. Install the Gatsby CLI
+Projects are visible only if `lastWorked` falls within three years of the build date. It means the last substantive contribution, **not** a cosmetic edit or a repository update by another contributor. Deployment rebuilds that rule; a static published site cannot age content automatically between builds. Dates identify activity, not employment start dates. Writing is a separate archive and remains available after three years.
 
-   ```sh
-   npm install -g gatsby-cli
-   ```
+Optional repository, client and app-store URLs can be omitted. Case-study navigation always works locally. Missing optional URLs resolve to `/`; the visible fallback is labelled **Portfolio overview** rather than masquerading as an app/client link. No private repository URL is published.
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+## Writing here and elsewhere
 
-   ```sh
-   nvm install
-   ```
+You can publish full articles here. Use a `canonical` URL when republishing an existing Hashnode article; omit it for portfolio-first articles. The imported articles preserve your writing, with editorial media placeholders removed and a grammar correction. Both have their original publication dates and source links. Hashnode and Medium remain optional distribution channels, not required infrastructure.
 
-3. Install dependencies
+GitHub Pages has no private admin panel or server-side form handler. Editing Markdown locally or in GitHub and pushing is the publication workflow. For easier editing, a Git-based content editor can be added later without redesigning the site.
 
-   ```sh
-   yarn
-   ```
+## Deploy
 
-4. Start the development server
+1. Put **this folder's contents at the root** of the `DonnC/donnc.github.io` repository. Preserve any existing custom-domain setting if applicable.
+2. Commit `package-lock.json` with the source. Do not commit `node_modules/`, `.astro/` or `dist/`.
+3. In repository Settings → Pages, choose **GitHub Actions** as Source.
+4. Push to `dev`, the repository's existing default branch, or run the deploy workflow manually. The workflow builds/checks before deploying.
 
-   ```sh
-   npm start
-   ```
+The current live site is built from `master`, which holds the previous Gatsby build output. The new source belongs on `dev`. Keep `master` intact as the rollback copy, and switch Pages Source to GitHub Actions when publishing the replacement. See `docs/deployment-plan.md` for the exact migration and rollback steps.
 
-## 🚀 Building and Running for Production
+This implementation is configured for a user Pages site at the domain root. A different repository name needs a `base` setting **and every internal route/asset URL updated**. See [Astro’s GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/).
 
-1. Generate a full static production build
+The prepared migration is on the `portfolio-refresh` branch. Publication uses the repository's `dev` branch and the GitHub Pages workflow.
 
-   ```sh
-   npm run build
-   ```
+## Content judgment
 
-1. Preview the site as it will appear once deployed
+Eight grouped stories balance three prominent delivery areas with ERP, tooling, messaging and creative work. Professional titles and sole ownership are based on your confirmation; numerical outcomes and deployment status are not inferred from commits. PMP is presented as active, earned in 2024. Baobab, KinetiFrame and the compliance roadmap carry development qualifications. Kafka support is accurately described as optional in the current messaging setup.
 
-   ```sh
-   npm run serve
-   ```
+The next meaningful improvement is evidence: approved screenshots, a redacted architecture example, or one substantiated before/after result for each leading case. Update the prose as those become available. Generic numerical claims would weaken rather than improve it.
 
-## 🎨 Color Reference
-
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
-| Light Navy     | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
-| Lightest Navy  | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
-| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
-| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
-| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+See `docs/content-review.md` for the remaining assumptions and `docs/profile-readme-draft.md` for a matching GitHub profile draft.

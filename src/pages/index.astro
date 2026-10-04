@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PostList from '../components/PostList.astro';
+import { recentProjects, publishedPosts } from '../lib/content';
+const projects = await recentProjects();
+const posts = (await publishedPosts()).slice(0, 2);
+---
+<BaseLayout>
+  <section class="hero wrap">
+    <div class="hero-copy"><div class="eyebrow"><span class="small-dot"></span> SENIOR SOFTWARE ENGINEER · PMP</div><h1>Payments.<br />Platforms.<br /><span class="serif-accent">Built to connect.</span></h1><p class="hero-lede">I’m Donald. I build the software behind payments, mobile banking and everyday business operations — from the device in your hand to the systems behind it.</p><div class="hero-actions"><a class="button" href="/work/">Explore my work <Arrow /></a><a class="text-link" href="/about/">The person behind it <Arrow diagonal /></a></div><div class="hero-note">Based in Zimbabwe <span>•</span> Engineering, architecture & technical leadership</div></div>
+    <div class="hero-art" role="img" aria-label="Illustration connecting a payment terminal and mobile app to business systems">
+      <div class="art-caption"><span>FROM THE DEVICE</span><span>TO THE BUSINESS</span></div>
+      <svg viewBox="0 0 520 490" fill="none" aria-hidden="true">
+        <circle cx="262" cy="246" r="192" stroke="#b8cdbf" stroke-dasharray="3 8" />
+        <path d="M146 191h115v-63h117M145 289h116v67h112M260 128v228M260 242h116" stroke="#527865" stroke-width="2" />
+        <circle cx="260" cy="242" r="27" fill="#c7df83" stroke="#183f36" stroke-width="2" /><path d="m249 242 8 8 15-17" stroke="#183f36" stroke-width="3" />
+        <g transform="translate(53 118) rotate(-8 75 100)"><rect width="132" height="218" rx="19" fill="#193f35" /><rect x="10" y="11" width="112" height="121" rx="10" fill="#f7f6ed" /><rect x="47" y="22" width="38" height="4" rx="2" fill="#c6d2c7" /><circle cx="66" cy="60" r="16" fill="#d8e8ab" /><path d="m59 61 5 5 10-12" stroke="#193f35" stroke-width="2" /><text x="66" y="99" text-anchor="middle" fill="#193f35" font-size="13" font-weight="700">PAYMENT</text><text x="66" y="116" text-anchor="middle" fill="#65746a" font-size="9">Connected to the next step</text>{[0,1,2].map(y => [0,1,2].map(x => <rect x={17+x*34} y={145+y*18} width="28" height="12" rx="4" fill={y === 2 && x === 2 ? '#c7df83' : '#547365'} />))}<path d="M48 206h36" stroke="#87a290" stroke-width="3" stroke-linecap="round" /></g>
+        <g transform="translate(327 81)"><rect width="157" height="92" rx="12" fill="#fffdf4" stroke="#b4c9b6" /><rect x="15" y="16" width="27" height="27" rx="7" fill="#e7efcf" /><path d="m23 30 5 5 8-10" stroke="#183f36" stroke-width="2" /><text x="15" y="64" fill="#183f36" font-size="13" font-weight="700">PAYMENT SYSTEMS</text><text x="15" y="79" fill="#637268" font-size="10">Switches · wallets · terminals</text></g>
+        <g transform="translate(344 207)"><rect width="157" height="92" rx="12" fill="#fffdf4" stroke="#b4c9b6" /><rect x="15" y="16" width="27" height="27" rx="7" fill="#e7e4f2" /><path d="M24 22h10v15H24z" stroke="#183f36" stroke-width="1.5" /><text x="15" y="64" fill="#183f36" font-size="13" font-weight="700">MOBILE EXPERIENCES</text><text x="15" y="79" fill="#637268" font-size="10">Android · Flutter · chatbots</text></g>
+        <g transform="translate(326 332)"><rect width="157" height="92" rx="12" fill="#fffdf4" stroke="#b4c9b6" /><rect x="15" y="16" width="27" height="27" rx="7" fill="#f3e2c4" /><path d="M22 24h14M22 29h14M22 34h9" stroke="#183f36" stroke-width="1.5" /><text x="15" y="64" fill="#183f36" font-size="13" font-weight="700">BUSINESS PLATFORMS</text><text x="15" y="79" fill="#637268" font-size="10">Workflows · ERP · automation</text></g>
+        <text x="55" y="465" fill="#476655" font-size="10" letter-spacing="1.6">ENGINEERING ACROSS THE WHOLE JOURNEY.</text>
+      </svg><div class="art-foot"><span>SOFTWARE THAT JOINS THE DOTS</span><span>↗</span></div>
+    </div>
+  </section>
+  <div class="expertise-strip wrap"><span>Payments & integrations</span><span>Mobile engineering</span><span>Fullstack platforms</span><span>Technical leadership</span></div>
+  <section class="section wrap"><div class="section-heading"><div><span class="eyebrow">01 / SELECTED WORK</span><h2>Complex systems.<br />Clear purpose.</h2></div><p>Payment terminals, banking journeys and the platforms that keep business moving. Here’s what I built, and the thinking behind it.</p></div><div class="project-grid">{projects.filter(p => p.data.featured).map(project => <ProjectCard project={project} />)}</div><a class="text-link all-work" href="/work/">See all selected work <Arrow /></a></section>
+  <section class="approach-section"><div class="wrap approach-grid"><div><span class="eyebrow">02 / HOW I WORK</span><h2>Understand the business.<br /><span>Then engineer the system.</span></h2><p>I’m comfortable owning the journey from a changing business requirement to the application, integration and operational tools around it.</p><a class="text-link" href="/about/">More about my approach <Arrow /></a></div><div class="principles"><div><span>01</span><h3>Connect the whole journey</h3><p>A mobile screen is one part of a system. I work across the APIs, workflows and records it depends on.</p></div><div><span>02</span><h3>Build for the next change</h3><p>Reusable form engines, configurable processes and developer tools turn repeated problems into shared foundations.</p></div><div><span>03</span><h3>Own the delivery</h3><p>Lead engineering roles and an active PMP support the way I approach scope, decisions and delivery.</p></div></div></div></section>
+  <section class="section wrap"><div class="section-heading"><div><span class="eyebrow">03 / ENGINEERING NOTES</span><h2>Things I’ve learned<br />by building.</h2></div><a class="text-link" href="/writing/">All writing <Arrow /></a></div><PostList posts={posts} /></section>
+</BaseLayout>

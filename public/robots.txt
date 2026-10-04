@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://donnc.github.io/sitemap-index.xml

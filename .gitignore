@@ -1,11 +1,18 @@
-# Project dependencies
-.cache
-node_modules
-yarn-error.log
-package-lock.json
+# build output
+dist/
 
-# Build directory
-/public
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment
+.env
+.env.production
+
+# macOS
 .DS_Store
-
-.vscode/
