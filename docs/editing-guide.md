@@ -32,7 +32,7 @@ Your introduction goes here.
 Describe the problem, your choices and what you learned.
 ```
 
-Set `draft: false` when ready. The page, writing list, reading time and RSS feed update automatically. The filename becomes `/writing/your-article-name/`. Avoid renaming published files because that changes their URLs.
+Set `draft: false` when ready. The page, writing list, reading time and RSS feed update automatically. The filename becomes `/writing/your-article-name/`. Avoid renaming published files because that changes their URLs. `draft` hides the article from the website, not from the public source repository.
 
 For an article first published elsewhere, add `canonical: "https://..."` with the original article URL. For portfolio-first writing, omit it. You can keep writing on Hashnode and republish here, or make this your primary archive and use other platforms for distribution. There is no automatic synchronization.
 

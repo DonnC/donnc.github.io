@@ -42,11 +42,11 @@ GitHub Pages has no private admin panel or server-side form handler. Editing Mar
 3. In repository Settings → Pages, choose **GitHub Actions** as Source.
 4. Push to `dev`, the repository's existing default branch, or run the deploy workflow manually. The workflow builds/checks before deploying.
 
-The current live site is built from `master`, which holds the previous Gatsby build output. The new source belongs on `dev`. Keep `master` intact as the rollback copy, and switch Pages Source to GitHub Actions when publishing the replacement. See `docs/deployment-plan.md` for the exact migration and rollback steps.
+The Astro source is on `dev`, published through GitHub Actions. `master` retains the previous Gatsby output for rollback. See `docs/deployment-plan.md` for the migration record and rollback steps.
 
 This implementation is configured for a user Pages site at the domain root. A different repository name needs a `base` setting **and every internal route/asset URL updated**. See [Astro’s GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/).
 
-The prepared migration is on the `portfolio-refresh` branch. Publication uses the repository's `dev` branch and the GitHub Pages workflow.
+The migration was merged through pull request #3 on 4 October 2026. Future edits publish when they reach `dev`.
 
 ## Content judgment
 
