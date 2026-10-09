@@ -22,3 +22,9 @@
   .email-link { font-size: 15px; }
   .email-link > .arrow { display: none; }
 }
+
+/* Four homepage stories form two balanced rows; keep the mobile layout stacked. */
+.section.wrap > .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 800px) {
+  .section.wrap > .project-grid { grid-template-columns: 1fr; }
+}
