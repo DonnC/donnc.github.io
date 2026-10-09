@@ -19,6 +19,7 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
     links++;
   }
   if (/github\.com\/DonnC\/(?:mTMS|zw_compliance|simplex|orbit)/i.test(html)) errors.push(`Private repository link in ${file}`);
+  if (/\b(?:AFC|Simplex|Orbit)\b/i.test(html)) errors.push(`Client-identifying content in ${file}`);
   if (/Media: Show|CHANGE_ME|TODO_PUBLISH|C:\\Users\\/.test(html)) errors.push(`Unfinished or local-only content in ${file}`);
 }
 if (!files.some(f => f.endsWith('rss.xml'))) errors.push('Missing RSS feed');

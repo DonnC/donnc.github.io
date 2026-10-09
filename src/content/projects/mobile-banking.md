@@ -1,15 +1,15 @@
 ---
-title: "AFC Mobile & WhatsApp banking"
+title: "Mobile & conversational banking"
 description: "Mobile banking and conversational journeys that connect account services with the channels customers use."
 category: "Mobile"
-role: "Lead mobile engineer · AFC Mobile"
+role: "Lead mobile engineer · Banking industry"
 status: "Professional work"
 lastWorked: "2025-09-30"
 order: 3
 featured: true
 diagram: "banking"
 stack: ["Flutter", "Dart", "Java", "Spring Boot", "WhatsApp"]
-proof: ["Led mobile engineering for AFC Mobile", "Worked across accounts, cards, loans and wallet journeys", "Contributed to AFC WhatsApp banking integrations"]
+proof: ["Led mobile engineering for a financial-sector client", "Worked across accounts, cards, loans and wallet journeys", "Contributed to WhatsApp banking integrations"]
 ---
 
 ## The problem
@@ -18,9 +18,9 @@ A banking channel needs to make complex services understandable on a small scree
 The same bank can also reach people through conversational channels. That requires a different interaction model while keeping the connection to banking services coherent.
 
 ## My role
-I was the **lead mobile engineer on AFC Mobile**. My work spans Flutter application engineering and its connection to banking APIs, across account information, card management, loans, billers, wallets and multicurrency journeys.
+I was the **lead mobile engineer for a financial-sector client**. My work spans Flutter application engineering and its connection to banking APIs, across account information, card management, loans, billers, wallets and multicurrency journeys.
 
-I also worked on **AFC WhatsApp banking**, including backend integrations and conversational loan, account-balance and statement flows. These products share a banking domain and serve different customer interactions. My lead mobile role applies to AFC Mobile.
+I also worked on **WhatsApp banking**, including backend integrations and conversational loan, account-balance and statement flows. These products share a banking domain and serve different customer interactions. I led the mobile application engineering and contributed to the conversational channel.
 
 ## The engineering approach
 Mobile journeys need clear boundaries between presentation, application state and service responses. The user should be able to understand what is happening even when a service takes time or a request cannot complete.

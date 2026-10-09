@@ -4,12 +4,12 @@ const { kind, compact = false } = Astro.props;
 const diagrams: Record<string, { label: string; title: string; nodes: string[]; bottom: string; number: string }> = {
   payments: { label: 'MPOS + MTMS', title: 'One payment. A connected system.', nodes: ['TERMINAL', 'PAYMENT SWITCH', 'TERMINAL MANAGEMENT'], bottom: 'Android / ISO 8583 / Frappe', number: '01' },
   workflows: { label: 'BANKING WORKFLOWS', title: 'From a document to a decision.', nodes: ['CAPTURE', 'REVIEW', 'APPROVE'], bottom: 'Dynamic forms / Process engine / Audit trail', number: '02' },
-  banking: { label: 'AFC DIGITAL BANKING', title: 'The bank, in your hand.', nodes: ['MOBILE', 'BANKING SERVICES', 'WHATSAPP'], bottom: 'Flutter / APIs / Conversational journeys', number: '03' },
+  banking: { label: 'MOBILE BANKING', title: 'The bank, in your hand.', nodes: ['MOBILE', 'BANKING SERVICES', 'WHATSAPP'], bottom: 'Flutter / APIs / Conversational journeys', number: '03' },
   erp: { label: 'FRAPPE / ERPNEXT', title: 'Business logic. Connected.', nodes: ['CUSTOM APPS', 'ERP RECORDS', 'PAYMENT INTEGRATIONS'], bottom: 'Python / Frappe / ERPNext', number: '04' },
   forms: { label: 'VANT FLOW + BAOBAB', title: 'Define once. Build on it.', nodes: ['METADATA', 'FORM RUNTIME', 'APPLICATION SERVICES'], bottom: 'Angular / Java / Developer tooling', number: '05' },
   chat: { label: 'WCE ECOSYSTEM', title: 'A better conversation starts here.', nodes: ['FLOW TEMPLATES', 'BOT ENGINE', 'LOCAL EMULATOR'], bottom: 'Python / Java / WhatsApp / USSD', number: '06' },
   messaging: { label: 'BULK MESSAGING', title: 'A campaign is a system.', nodes: ['RECIPIENT DATA', 'BATCH / EVENTS', 'DELIVERY ATTEMPTS'], bottom: 'Spring Batch / Kafka integration / PostgreSQL', number: '07' },
-  animation: { label: 'KINETIFRAME · IN DEVELOPMENT', title: 'Two ways to bring a story to life.', nodes: ['DRAW FRAMES', 'BUILD A RIG', 'ANIMATE'], bottom: 'Kotlin / Compose / Canvas', number: '08' },
+  animation: { label: 'KINETIFRAME · IN DEVELOPMENT', title: 'Draw it. Pose it. Animate it.', nodes: ['DRAW FRAMES', 'POSE ACTORS', 'ANIMATE'], bottom: 'Kotlin / Compose / Canvas', number: '08' },
 };
 const d = diagrams[kind] || diagrams.payments;
 ---

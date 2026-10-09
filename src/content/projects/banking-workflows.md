@@ -18,7 +18,7 @@ In banking operations, a form often becomes a process: capture information, coll
 Building a new frontend for every variation creates repeated work. Keeping the process, the data and the review experience aligned is the more useful engineering problem.
 
 ## My contribution
-I was the **lead fullstack engineer** on Orbit/workflow work. I built the workflow portal, created the Vant Flow package used in it, and built the IAM and messaging portals.
+I was the **lead fullstack engineer** on workflow and business-automation systems in the banking industry. I built the workflow portal, created the Vant Flow package used in it, and built the IAM and messaging portals.
 
 The surrounding work spans Spring services and Angular applications. The workflow foundations include versioned process definitions, human tasks, service tasks, decision steps, document attachments and an audit history around cases.
 

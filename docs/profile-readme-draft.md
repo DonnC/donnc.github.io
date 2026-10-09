@@ -10,8 +10,8 @@ I build software that connects the device in your hand to the business behind it
 
 - **mPOS + mTMS:** independently built Android POS and Frappe terminal management, spanning banking and retail payment flows, ISO 8583, ZimSwitch and wallet integrations.
 - **Banking workflows:** lead fullstack engineer on workflow and document-approval systems; built the portal, Vant Flow form package, and IAM and messaging portals.
-- **AFC digital banking:** lead mobile engineer on AFC Mobile, with additional WhatsApp banking work.
-- **Frappe / ERPNext:** lead systems engineering on Simplex integrations, custom business apps and ERP customizations. Zimbabwe compliance work includes fiscalization; payroll and NSSA remain roadmap items.
+- **Mobile and conversational banking:** lead mobile engineer on a banking mobile application, with additional WhatsApp banking work.
+- **Frappe / ERPNext:** lead systems engineering on business-system integrations, custom business apps and ERP customizations. Zimbabwe compliance work includes fiscalization; payroll and NSSA remain roadmap items.
 - **Bulk messaging:** asynchronous and batch processing, with optional Kafka integration.
 
 Some of this work is private. The portfolio explains my role and engineering decisions without exposing client source code.

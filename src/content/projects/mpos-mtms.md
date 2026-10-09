@@ -1,33 +1,41 @@
 ---
 title: "mPOS + mTMS"
-description: "Android POS and Frappe terminal management: connecting the payment experience with the tools needed to manage it."
+description: "A Zimbabwe-focused banking and retail payment-terminal application, connected to provisioning, diagnostics and settlement reporting."
 category: "Payments"
-role: "Independent creator · Built end to end"
+role: "Product creator · Payments & Android engineer"
 status: "Independent product"
-lastWorked: "2026-10-02"
+lastWorked: "2026-10-05"
 order: 1
 featured: true
 diagram: "payments"
 stack: ["Kotlin", "Android", "ISO 8583", "EMV", "Frappe"]
-proof: ["Sole engineering ownership across both products", "POS transaction and payment-switch integration", "Terminal provisioning and configuration lifecycle"]
+proof: ["Built the payment application and terminal-management platform", "Payment lifecycle: messaging, reversals and settlement controls", "Separate client integrations and device implementations"]
 ---
 
-## The problem
-A payment terminal is only one part of a payment system. The application must handle the transaction, but someone also has to provision the device, manage its parameters, distribute updates and understand what happened when a payment needs investigation.
+## Payments and the operations behind them
+**mPOS + mTMS** is my independently developed payment-terminal platform, designed around Zimbabwean banking and retail workflows. It connects the application a cashier uses with the tools needed to provision, configure and support its terminals.
 
-mPOS and mTMS are my answer to both sides of that problem. I designed and built them independently as a connected product family.
+My focus is payment acceptance and its operational lifecycle: what happens when a response is lost, a transaction needs reversing, or a batch needs reconciling.
 
-## What I built
-**mPOS** is the Android payment application. My work covers banking and retail POS journeys, ISO 8583 transaction messaging and payment-switch integration, including Zimswitch-related flows and wallet use cases. The application includes EMV integration and utilities around payment messages, terminal data and sensitive-log masking.
+## The terminal application
+**mPOS** covers card-payment and banking journeys, ISO 8583 messaging, Postilion integration and EMV integration, alongside Zimbabwean wallet and change use cases. Multicurrency handling, cashier shifts, transaction history and receipts support the wider merchant workflow.
 
-**mTMS** is the Frappe-based terminal management application. It brings terminal registration, parameter distribution, provisioning, remote commands and software-update management into the same operational picture. Settlement records and reporting are also part of the terminal-management domain.
+Reversal handling retains references to the original transaction. Settlement preflight checks unresolved and unsynchronised records before proceeding. These details connect the on-device experience with the host and the records needed for investigation.
 
-The point of presenting these together is the connection: a device needs a management layer, and that management layer has to understand the device’s payment lifecycle.
+## The management platform
+**mTMS** uses Frappe to manage terminal registration, configuration, credentials, remote commands, deployment status and diagnostics. Transaction synchronisation and settlement records give the management layer visibility into the payment lifecycle.
 
-## The engineering decisions
-I separated the payment application from the management plane. The terminal can focus on transaction behaviour, while Frappe gives the management side a foundation for records, administration and business processes.
+Settlement reporting preserves terminal-reported values alongside management-system totals for comparison. The payment switch remains the settlement authority.
 
-Payment integrations also make the details matter. Message construction, response handling, terminal parameters and diagnostic data need clear boundaries. I treat payment behaviour and operational tooling as parts of the same delivery problem.
+## Built for different clients and devices
+I separated reusable payment behaviour from client-specific host integrations, branding and device implementations. Hardware abstractions provide a foundation for supported terminal families without assuming every device is interchangeable.
 
-## Why this work matters
-This is my strongest example of ownership across **Android engineering, payment integration and ERP-backed operations**. It demonstrates work beyond a mobile UI: the transaction, the device and the surrounding business tools.
+The journey from messaging and EMV integration to wallets, settlement controls and terminal operations reflects sustained engineering across the application and management platform.
+
+## Current scope
+This case study describes implemented engineering work. Deployment on another bank's host or terminal estate requires its own integration, testing and approvals; it is not a claim of universal certification or production acceptance.
+
+A merchant self-service portal is planned to bring terminal activity, reports and transaction queries closer to the people operating the business.
+
+## What this demonstrates
+**Payment-domain engineering, native Android development, backend integration and operational systems design** across a connected product family.

@@ -2,13 +2,13 @@
 title: "Frappe, ERPNext & payment integrations"
 description: "Custom business applications, voucher and wallet workflows, payment integration and Zimbabwe-focused ERP development."
 category: "Platforms"
-role: "Lead systems engineer · Simplex / Independent tools"
+role: "Lead systems engineer · Business systems"
 status: "Professional work + ongoing tools"
 lastWorked: "2026-09-13"
-order: 4
+order: 5
 diagram: "erp"
 stack: ["Python", "Frappe", "ERPNext", "Payment APIs"]
-proof: ["Lead systems engineering at Simplex", "Custom ERP applications and payment-related workflows", "Zimbabwe compliance app under development"]
+proof: ["Owned 2 ERPNext implementations and 7 custom-app implementations", "Custom ERP applications and payment-related workflows", "Zimbabwe compliance app under development"]
 ---
 
 ## The problem
@@ -17,7 +17,7 @@ An ERP becomes more useful when it reflects how a business actually operates. Pa
 My Frappe/ERPNext work combines business applications with the integration layer around them.
 
 ## Professional work
-As **lead systems engineer at Simplex**, my work includes custom Frappe/ERPNext applications and payment-related systems. The wider project family covers voucher purchase and redemption, merchant balances, transaction records, commissions and their connection to ERP accounting documents.
+As **lead systems engineer**, I owned **2 ERPNext implementations and 7 custom-app implementations**. My work includes custom Frappe/ERPNext applications and payment-related systems. The wider project family covers voucher purchase and redemption, merchant balances, transaction records, commissions and their connection to ERP accounting documents.
 
 This is systems work: a transaction needs a clear relationship with the business record it creates, and the people operating the application need a usable workflow around that record.
 

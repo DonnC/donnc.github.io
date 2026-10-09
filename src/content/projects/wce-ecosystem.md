@@ -5,7 +5,7 @@ category: "Tools"
 role: "Creator & maintainer"
 status: "Public projects"
 lastWorked: "2026-06-23"
-order: 6
+order: 7
 diagram: "chat"
 repository: "https://github.com/DonnC/wce-emulator"
 stack: ["Python", "Java", "Spring Boot", "React", "Node.js"]

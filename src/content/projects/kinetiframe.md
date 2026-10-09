@@ -1,33 +1,47 @@
 ---
-title: "KinetiFrame"
-description: "A mobile-first 2D animation app exploring frame-by-frame drawing and character rigging in one creative workflow."
+title: "Kinetiframe"
+description: "A hybrid 2D animation studio for Android: draw frames, pose reusable characters and combine them into editable scenes."
 category: "Creative"
-role: "Independent creator"
-status: "Work in progress"
-lastWorked: "2026-10-02"
-order: 8
+role: "Product creator · Android engineer"
+status: "Active development"
+lastWorked: "2026-10-08"
+order: 4
+featured: true
 diagram: "animation"
-stack: ["Kotlin", "Jetpack Compose", "Canvas", "MVI"]
-proof: ["Native Android animation application", "Frame-by-frame and 2D character-rigging work", "Custom canvas, timeline and interaction engineering"]
+stack: ["Kotlin", "Jetpack Compose", "Canvas", "IK / FK", "MVI"]
+proof: ["Actor Studio with independently authored character views", "Reusable performances and editable starter projects", "Shared rendering for editor, thumbnails and export"]
 ---
 
-## The idea
-**KinetiFrame** is my mobile-first 2D animation application, currently in development. It explores two ways of creating motion: drawing frames individually and animating a rigged character.
+## Animate without redrawing every action
+I started **Kinetiframe** because I wanted to animate characters without redrawing them every time they raised a hand or changed a pose. I built a native Android studio that combines frame-by-frame drawing with reusable, rigged characters.
 
-It is a different domain from my business software, but it draws on the same interest in building tools people can use to create something.
+Draw when a scene needs a new shape or expression. Pose an actor when the same artwork can carry the action. Bring both into one scene with backgrounds and audio.
 
-## What I’m building
-The native Android application uses Kotlin, Jetpack Compose and custom Canvas work. The project includes frame-based drawing, timeline interaction, frame caching and the manipulation and maths around 2D actors and rigging.
+## Actor Studio
+An actor can have independently authored front, profile, three-quarter and back views. Each view holds its own skeleton, artwork and part stacking. A profile is a separately drawn character view, not a flattened front drawing.
 
-I’m developing the application independently, working across the product interaction and the implementation behind it.
+Saved performances contain motion and reference a specific actor revision. This lets a creator improve a character without silently changing an earlier performance. Human, quadruped and custom structures support different kinds of characters and props.
 
-## The engineering challenge
-A creative tool has a demanding interaction loop. A gesture needs to translate into a predictable edit, and the document, timeline and visual state need to stay consistent as the user moves between them.
+View-specific motion presets can be auditioned and adjusted before applying. Authored motion includes pose timing, root travel and contact information; the profile-running example demonstrates deliberate foot placement.
 
-Combining raster frames with character rigging adds another layer: the modes have different editing models, but should still feel like parts of the same product.
+## Reusable artwork and editable examples
+The application includes editable starter projects, characters, performances and packs. They demonstrate gestures, profile running, a quadruped, custom articulation and scenes combining drawings with actors.
 
-## Where it stands
-This is **work in progress**. Current development focuses on performance, workflow completeness and the boundaries between animation modes.
+![Five sampled poses from the editable Actor Views and Motion Lab project: front-facing gestures, profile running, a quadruped and an articulated flag.](/images/kinetiframe-motion-lab.png)
 
-## Why include it here?
-It shows another side of my mobile engineering: **custom interaction, graphics, state modelling and independent product development**. It complements the banking work without pretending to carry the same delivery status.
+*Sampled poses from an editable bundled project, not an application screenshot.*
+
+Mouth, eye, hand and prop packs make drawings reusable. The bundled presenter scene uses separate frame-by-frame layers and held expression replacements. These are raster stamps, rather than automatic lip-sync or live rig-part swaps.
+
+## Engineering a creative tool
+I work across product interaction, graphics, motion evaluation, persistence and asset packaging. The editor, thumbnails and project export share actor-rendering logic, keeping the visual interpretation consistent across those paths.
+
+Immutable actor revisions preserve the relationship between artwork and motion. Bounded caches, disk-backed frames and streamed audio mixing address the resource constraints of a mobile device. Native project and pack archives keep the examples editable and reusable.
+
+## Current stage
+Kinetiframe is in **active development**, with the local authoring workflows and bundled content implemented. Device testing and export validation remain part of release preparation.
+
+Views are authored separately and do not automatically blend within a performance. Cloud distribution, marketplace purchases and an AI assistant are future work. The goal is a paid creative tool with a useful asset catalogue, while keeping local creation available offline.
+
+## What this demonstrates
+**Native Android engineering, graphics and animation maths, document modelling and product ownership** in a demanding interactive application.

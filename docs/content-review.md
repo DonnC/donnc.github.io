@@ -4,9 +4,9 @@ This is the publishable narrative, not an exported private-repository audit. Sou
 
 ## Confirmed directly by Donald
 
-- Lead mobile engineer on AFC Mobile; WhatsApp banking also part of his work.
-- Lead fullstack engineer on Orbit/workflows; sole implementation of the workflow portal, Vant Flow package, IAM portal and messaging portal.
-- Lead systems engineer at Simplex.
+- Lead mobile engineer on a mobile banking application; WhatsApp banking also part of his work.
+- Lead fullstack engineer on banking workflows; sole implementation of the workflow portal, Vant Flow package, IAM portal and messaging portal.
+- Lead systems engineer for business systems.
 - mPOS and mTMS independently built by Donald.
 - PMP earned 2024 and currently active.
 - KinetiFrame is WIP. Fiscalisation is the current zw_compliance focus, payroll/NSSA future work.
@@ -23,8 +23,8 @@ This is the publishable narrative, not an exported private-repository audit. Sou
 
 ## Critical assessment
 
-The site makes domain breadth and personal ownership much clearer. However, case studies currently describe capabilities more strongly than measured outcomes. Senior/lead credibility would improve substantially with one approved artifact and one verifiable outcome for each of mPOS/mTMS, workflows and AFC Mobile. The active PMP supports delivery discipline; it does not itself establish engineering seniority.
+The site makes domain breadth and personal ownership much clearer. However, case studies currently describe capabilities more strongly than measured outcomes. Senior/lead credibility would improve substantially with one approved artifact and one verifiable outcome for each of mPOS/mTMS, workflows and a mobile banking application. The active PMP supports delivery discipline; it does not itself establish engineering seniority.
 
-KinetiFrame sits later in the work collection so its WIP status enriches the story without competing with the banking and payment evidence. The home shows three cases to avoid overwhelming a recruiter. The remaining five are one click away.
+The home features four complementary stories: payments, banking workflows, mobile banking and Kinetiframe. The animation case study reflects authored views, reusable performances and editable bundled content; release validation and marketplace work remain explicitly unfinished. Professional case studies use industry and role descriptions without client names. The ERP implementation counts were confirmed by Donald.
 
-All diagrams are labelled system sketches and are conceptual, not product screenshots or exact internal topology. No CV download is shown because a current CV was not supplied. No LinkedIn URL is guessed because the existing profile and scaffold used different addresses.
+Diagrams are labelled system sketches and are conceptual, not product screenshots or exact internal topology. The Kinetiframe storyboard is an existing authored demo preview, labelled as sampled poses rather than an application screenshot. No CV download is shown because a current CV was not supplied. No LinkedIn URL is guessed because the existing profile and scaffold used different addresses.
