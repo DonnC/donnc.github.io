@@ -50,7 +50,7 @@ The migration was merged through pull request #3 on 4 October 2026. Future edits
 
 ## Content judgment
 
-Eight grouped stories balance four featured stories across payments, banking, automation and creative tooling with ERP, tooling, messaging and creative work. Professional titles and sole ownership are based on your confirmation; numerical outcomes and deployment status are not inferred from commits. PMP is presented as active, earned in 2024. Baobab, KinetiFrame and the compliance roadmap carry development qualifications. Kafka support is accurately described as optional in the current messaging setup.
+Nine project stories balance four featured stories across payments, banking, automation and creative tooling with ERP, tooling, messaging and creative work. Professional titles and sole ownership are based on your confirmation; numerical outcomes and deployment status are not inferred from commits. PMP is presented as active, earned in 2024. Baobab has its own framework case study, a verified synthetic Task portal screenshot and a homepage link. Its working capabilities are separated from production validation still required; Kinetiframe and the compliance roadmap also carry development qualifications. Vant Flow retains the existing /work/vant-flow-baobab/ URL to preserve published links. Kafka support is accurately described as optional in the current messaging setup.
 
 The next meaningful improvement is evidence: approved screenshots, a redacted architecture example, or one substantiated before/after result for each leading case. Update the prose as those become available. Generic numerical claims would weaken rather than improve it.
 

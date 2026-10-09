@@ -28,3 +28,6 @@
 @media (max-width: 800px) {
   .section.wrap > .project-grid { grid-template-columns: 1fr; }
 }
+
+.visual-baobab{background:#dce9e2}
+.principles .text-link{font-size:12px;margin-top:12px}

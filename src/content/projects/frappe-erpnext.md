@@ -5,7 +5,7 @@ category: "Platforms"
 role: "Lead systems engineer · Business systems"
 status: "Professional work + ongoing tools"
 lastWorked: "2026-09-13"
-order: 5
+order: 6
 diagram: "erp"
 stack: ["Python", "Frappe", "ERPNext", "Payment APIs"]
 proof: ["Owned 2 ERPNext implementations and 7 custom-app implementations", "Custom ERP applications and payment-related workflows", "Zimbabwe compliance app under development"]

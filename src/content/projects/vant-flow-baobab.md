@@ -1,38 +1,34 @@
 ---
-title: "Vant Flow & Baobab"
-description: "Metadata-driven forms and application foundations that turn recurring business requirements into reusable tooling."
+title: "Vant Flow"
+description: "An Angular form builder and renderer that keep changing business forms on one shared schema."
 category: "Tools"
-role: "Creator & architect"
-status: "Public tools · Baobab in development"
+role: "Creator & library architect"
+status: "Public library · Used in workflow work"
 lastWorked: "2026-10-02"
-order: 6
+order: 7
 diagram: "forms"
 repository: "https://github.com/DonnC/vant-flow"
-stack: ["Angular", "TypeScript", "Java", "Spring Boot", "Python CLI"]
-proof: ["Created Vant Flow and integrated it into workflow work", "Shared form schema for builder and renderer", "Developing Baobab’s metadata-driven application architecture"]
+stack: ["Angular", "TypeScript", "Schema-driven forms"]
+proof: ["Created the library and integrated it into a banking workflow portal", "Shared definition for builder, preview and runtime renderer", "Form authoring and rendering layer used by Baobab"]
 ---
 
 ## The repeated problem
-Business applications often repeat the same work: define a document, build its form, connect it to persistence, and add business-specific behaviour. When requirements change frequently, duplication becomes expensive to maintain.
+Workflow-heavy applications need forms that change with the business. Building each screen separately creates repeated work and makes it harder to keep authoring, validation and the live experience aligned.
 
-Vant Flow and Baobab approach different layers of that problem. They are related by an architectural idea, rather than being one finished platform.
+I created **Vant Flow**, an Angular form builder and runtime renderer, to give those forms a shared model.
 
-## Vant Flow: a shared form model
-I created **Vant Flow**, an Angular form builder and runtime renderer. A shared document definition powers authoring, preview, runtime interaction and readonly replay.
+## One definition, several experiences
+The same document definition supports visual authoring, preview, runtime interaction and readonly replay. The reusable layer owns form behaviour; the host application keeps control of authentication, APIs, storage, uploads and workflow orchestration.
 
-The host application retains control of authentication, APIs, storage, uploads and workflow orchestration. That boundary lets the form engine handle reusable UI behaviour without owning the whole application.
+That boundary matters. A form library should fit into a business application without forcing it to adopt a new backend or process engine.
 
-The package is used in the workflow portal I built. It is public, so the design and implementation can be explored beyond this case study.
+## Applied in real workflow work
+I built the package and integrated it into the [banking workflow portal](/work/banking-workflows/) I developed as lead fullstack engineer. It gives changing business documents a reusable frontend foundation instead of requiring another isolated screen for every process.
 
-## Baobab: application foundations
-**Baobab is actively under development.** It extends my interest in metadata toward application architecture: document definitions, generated and developer-owned classes, lifecycle behaviour, generic APIs and persistence.
+## How it relates to Baobab
+Vant Flow also provides the form authoring and rendering layer inside [Baobab](/work/baobab/), my business application framework. Baobab connects document definitions to Java models, persistence, APIs and an administrative Desk, and supports independent custom Angular portals.
 
-The project brings together Java/Spring services, an Angular desk and Python command-line tooling. Its purpose is to make a business application easier to build while preserving places for custom engineering.
-
-## The tradeoff
-A reusable platform earns its place only when it reduces repeated work without hiding necessary decisions. Schemas need discipline, generated code needs clear boundaries, and extensibility must not make behaviour impossible to follow.
-
-Baobab’s production concerns are still work to be completed. I present it as architectural work in progress, rather than a proven replacement for established business platforms.
+They have different responsibilities: Vant Flow is the reusable form library; Baobab is the broader application framework. A custom Baobab portal can own its UI rather than being restricted to generated document forms.
 
 ## What it demonstrates
-These projects show **library design, systems architecture, Angular depth and developer-tool thinking**. They also explain a pattern in my professional work: build a reusable foundation when a requirement keeps coming back.
+**Angular library design, schema-driven UI and reusable engineering grounded in business requirements.** The architectural choice is to share the recurring form behaviour while preserving the host application's ownership of the system around it.

@@ -5,7 +5,7 @@ category: "Platforms"
 role: "Portal engineering & backend development"
 status: "Professional work"
 lastWorked: "2026-10-01"
-order: 8
+order: 9
 diagram: "messaging"
 stack: ["Java", "Spring Boot", "Spring Batch", "Kafka", "PostgreSQL", "Angular"]
 proof: ["Built the messaging portal", "Campaign, data-source and delivery-attempt workflows", "Batch processing with optional Kafka integration"]
